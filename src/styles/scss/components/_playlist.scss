@@ -25,5 +25,11 @@
             content: 'play_circle_filled';
             font-family: 'Material Icons';
         };
+
+        &--playing{
+            &:before {
+                content: 'pause_circle_filled';
+            }
+        }
     }
 }

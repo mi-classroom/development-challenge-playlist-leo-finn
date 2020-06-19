@@ -413,6 +413,8 @@ img {
     height: 100%;
     content: 'play_circle_filled';
     font-family: 'Material Icons'; }
+  .playlist__item--playing:before {
+    content: 'pause_circle_filled'; }
 
 /* Ranking
 ############################################################################ */
