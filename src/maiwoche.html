@@ -80,18 +80,7 @@
           </li>
         </ul>
       </section>
-      <section class="aside-content__section">
-        <h2 class="aside-content__headline">Hörproben von Hans Atom</h2>
-        <ul class="playlist">
-          <li class="playlist__item" data-js-source="./audio/hansatom_-_fine_print.mp3">
-            <span class="playlist__item-interpret">Hans Atom feat MissJudged</span> –
-            <span class="playlist__item-title">All of you</span>
-          </li>
-          <li class="playlist__item" data-js-source="./audio/hansatom_-_fine_print.mp3">
-            <span class="playlist__item-interpret">Hans Atom feat MissJudged</span> –
-            <span class="playlist__item-title">All of you</span>
-          </li>
-        </ul>
+      <section class="aside-content__section" data-js-playlist-mustache="./templates/audioplayer.html">
       </section>
     </aside>
   </div>
@@ -124,6 +113,7 @@
 
   </footer>
 </body>
+<script src="https://unpkg.com/mustache@latest"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.core.min.js"></script>
 <script src="./scripts/audioplayer.js"></script>
 

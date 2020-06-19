@@ -1,0 +1,10 @@
+<h2 class="aside-content__headline">Hörproben von {{ artist }}</h2>
+<ul class="playlist">
+  {{#songs}}
+  <li class="playlist__item" data-js-source={{src}}>
+    <span class="playlist__item-interpret">{{artist}}</span> –
+    <span class="playlist__item-title">{{title}}</span>
+  </li>
+  {{/songs}}
+</ul>
+{{^songs}}<p>Keine Lieder vorhanden.</p>{{/songs}}

@@ -13,7 +13,7 @@
     "duration-min": 4,
     "duration-sec": 8,
     "artist": "Hans Atom",
-    "title": "Persiphone",
+    "title": "Persiphone"
   },
   {
     "src": "./audio/hansatom_-_how-are.mp3",
@@ -21,7 +21,7 @@
     "duration-min": 5,
     "duration-sec": 29,
     "artist": "Hans Atom feat. the Fireproof Babies and MissJudged",
-    "title": "Who we are",
+    "title": "Who we are"
   },
   {
     "src": "./audio/hansatom_-_4real.mp3",
@@ -29,7 +29,7 @@
     "duration-min": 4,
     "duration-sec": 47,
     "artist": "Hans Atom feat. Urmymuse and Stellar Artwars",
-    "title": "4 Real",
+    "title": "4 Real"
   },
   {
     "src": "./audio/hansatom_-_fine_print.mp3",
@@ -37,7 +37,7 @@
     "duration-min": 4,
     "duration-sec": 58,
     "artist": "Hans Atom feat. Lonnie Ray Atkinson and Kirkoid",
-    "title": "Fine Print",
+    "title": "Fine Print"
   },
   {
     "src": "./audio/hansatom_-_paint-the-sky.mp3",

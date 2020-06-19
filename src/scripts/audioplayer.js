@@ -1,5 +1,28 @@
 /* eslint-disable no-undef */
 
+/**
+ * fetchData
+ *
+ * Ruft Daten asynchron von der angegebenen URL ab
+ *
+ */
+async function fetchData(apiURL, parseJSON = true) {
+  const response = await fetch(apiURL);
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  let data = null;
+  if (parseJSON) {
+    data = await response.json();
+  } else {
+    data = await response.text();
+  }
+  return data;
+}
+
+/**
+ * Audio-Player
+ */
 class Audioplayer {
   constructor(data) {
     this.data = data;
@@ -45,6 +68,31 @@ class Audioplayer {
   }
 }
 
-const audioplayer1 = new Audioplayer(document.querySelector('.playlist'));
+// const audioplayer1 = new Audioplayer(document.querySelector('.playlist'));
 
-console.log(audioplayer1);
+// console.log(audioplayer1);
+
+
+const dataURL = './json/playlist.json';
+
+(async () => {
+  const dataContent = await fetchData(dataURL);
+
+  const mustacheElement = document.querySelector('[data-js-playlist-mustache]');
+  const templateURL = mustacheElement.getAttribute('data-js-playlist-mustache');
+  const dataTemplate = await fetchData(templateURL, false);
+  const renderedSection = Mustache.render(dataTemplate, {
+    songs: dataContent,
+  });
+  mustacheElement.innerHTML = renderedSection;
+
+  const playlists = document.querySelectorAll('[data-js-playlist-mustache]');
+
+  console.log(playlists);
+
+  playlists.forEach((playlist) => {
+    new Audioplayer(playlist);
+  });
+})().catch((error) => {
+  console.log('error', error);
+});
