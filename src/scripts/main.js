@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-dupe-class-members */
 // eslint-disable-next-line import/extensions
 import Swipe from './modules/swipe.js';
 
