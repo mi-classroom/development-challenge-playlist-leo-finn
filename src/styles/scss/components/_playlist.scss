@@ -2,5 +2,28 @@
 ############################################################################ */
 
 .playlist {
+    &__item {
+        padding: $m $l;
+        border-bottom: $border-width solid $text-color;
+        line-height: $lh-default;
 
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: $interaction-color;
+            color: $lightest;
+            cursor: pointer;
+        }
+
+        &:before {
+            display: inline-block;
+            margin-left: -$l;
+            //padding-right: $xxs;
+            height: 100%;
+            content: 'play_circle_filled';
+            font-family: 'Material Icons';
+        };
+    }
 }
